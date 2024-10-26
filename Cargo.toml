@@ -1,0 +1,22 @@
+[package]
+name = "integration-builder"
+version = "0.1.0"
+edition = "2018"
+publish = false
+
+[dependencies]
+egui = "0.29.1"
+eframe = "0.29.1"
+image = "0.25.4"  # Required to read PNG files
+
+uuid = { version = "1.11.0", features = [
+    "v4",                # Lets you generate random UUIDs
+    "fast-rng",          # Use a faster (but still sufficiently random) RNG
+    "macro-diagnostics", # Enable better diagnostics for compile-time UUIDs
+] }
+
+serde = { version = "1", optional = true, features = ["derive"] }
+serde_derive = { version = "1", optional = true }
+serde_json = { version = "1", optional = true }
+
+
